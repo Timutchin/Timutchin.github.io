@@ -1,0 +1,396 @@
+<template>
+	<div class="page no-swipeback">
+
+		<div class="navbar">
+			<div class="navbar-inner">
+				{{#js_if "app.data.config.theme.navigation == 'hamburger'"}}
+				<div class="left">
+					<a href="#" class="link icon-only panel-open" data-panel="left">
+						<i class="hamburger hamburger--boring">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</i>
+					</a>
+				</div>
+				{{/js_if}}
+				<div class="title">
+					<img class="ios-only theme-light-only" src="assets/custom/img/logo-text-black.svg" height="24" alt="" />
+					<img class="ios-only theme-dark-only" src="assets/custom/img/logo-text-white.svg" height="24" alt="" />
+					<img class="md-only" src="assets/custom/img/logo-text-white.svg" height="24" alt="" />
+				</div>
+				<div class="right">
+					<a href="#" class="link icon-only" @click="openLanguageSelector">
+						<i class="icon material-icons">language</i>
+					</a>
+					<a href="#" class="link icon-only" @click="openThemeSelector">
+						<i class="icon material-icons">palette</i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-content">
+
+			<div class="slider-hero">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<div class="slide-content" style="background-image: linear-gradient(-20deg, #514BA1 0%, #BD4298 100%);">
+								<div class="slide-media">
+									<img src="assets/custom/img/full-logo-text-white.svg" width="300" alt="" />
+								</div>
+								<div class="slide-title">Ласкаво просимо!</div>
+								<div class="slide-text">Швидко. Зручно. Приємно. Вигідно.</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="slide-content" style="background-image: linear-gradient(-20deg, #667EEA 0%, #764BA2 100%);">
+								<div class="slide-media">
+									<i class="fa-stack fa-2x">
+										<span class="fas fa-circle fa-stack-2x text-color-white"></span>
+										<span class="fas fa-mobile-alt fa-stack-1x" style="color: #667EEA;"></span>
+									</i>
+								</div>
+								<div class="slide-title">O’CREDIT</div>
+								<div class="slide-text">Швидкість оформлення кредиту. Безпека особистих даних. Гнучкі та прозорі умови. Відсоткі за фактичні дні користування</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="slide-content" style="background-image: linear-gradient(-20deg, #003350 0%, #2797f4 100%);">
+								<div class="slide-media">
+									<i class="fa-stack fa-2x">
+										<span class="fas fa-circle fa-stack-2x text-color-white"></span>
+										<span class="fas fa-pencil-ruler fa-stack-1x" style="color: #FF9A44;"></span>
+									</i>
+								</div>
+								<div class="slide-title">АВТОЛОМБАРД</div>
+								<div class="slide-text">Кредит під заставу автомобіля. Ви отримуєте потрібну суму, залишаючи авто при собі!</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="slide-content" style="background-image: linear-gradient(-20deg, #dd0000 0%, #edc870 100%);">
+								<div class="slide-media">
+									<i class="fa-stack fa-2x">
+										<span class="fas fa-circle fa-stack-2x text-color-white"></span>
+										<span class="fas fa-palette fa-stack-1x" style="color: #2AF598;"></span>
+									</i>
+								</div>
+								<div class="slide-title">GOLDSTOCK</div>
+								<div class="slide-text">Інтернет-магазин ювелірних виробів. Краща альтернатива комісійним ювелірним виробам і аксесуарам.</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="slide-content" style="background-image: linear-gradient(-20deg, #5a7247 0%, #95c11c 100%);">
+								<div class="slide-media">
+									<i class="fa-stack fa-2x">
+										<span class="fas fa-circle fa-stack-2x text-color-white"></span>
+										<span class="fas fa-rocket fa-stack-1x" style="color: #FA71CD;"></span>
+									</i>
+								</div>
+								<div class="slide-title">Моя техніка</div>
+								<div class="slide-text">Торгова мережа магазинів електроніки, побутової техніки та товарів для дому.</div>
+								<div class="slide-actions">
+									<a href="{{$root.config.myt.itemUrl}}" target="_blank" class="button button-fill color-white external" style="color: #FA71CD;">Сайт</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="list media-list no-hairlines no-hairlines-between margin-vertical">
+				<ul>
+					<li>
+						<div class="item-content">
+							<div class="item-media">
+								<img src="assets/custom/img/framework7.svg" width="48" alt="" />
+							</div>
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">Отдел WEB разработки</div>
+								</div>
+								<div class="item-text">Прототип приложения построен на основе Framework7 - полнофункциональной мобильной HTML-инфраструктуры, предназначенной для разработки приложений со встроенным интерфейсом Android и iOS.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-media">
+								<img src="assets/custom/img/android-ios.svg" width="48" alt="" />
+							</div>
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">Кроссплатформенное приложение</div>
+								</div>
+								<div class="item-text">Реализована поддержка Android и iOS с использованием Google Material Design и Apple Cupertino Design соответственно.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-media">
+								<img src="assets/custom/img/menu.svg" width="48" alt="" />
+							</div>
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">Multiple Navigation Patterns</div>
+								</div>
+								<div class="item-text">Nectar comes with two navigation patterns most commonly used in mobile apps — Hamburger and Tab Bar.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-media">
+								<img src="assets/custom/img/translate.svg" width="48" alt="" />
+							</div>
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">Internationalization & RTL Support</div>
+								</div>
+								<div class="item-text">Build your app for users around the world by localizing your user interface in various languages.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-media">
+								<img src="assets/custom/img/pwa.svg" width="48" alt="" />
+							</div>
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">Progressive Web App Ready</div>
+								</div>
+								<div class="item-text">Add functionalities such as offline working, push notifications to your mobile web app with the help of service workers and provide your users the best of both worlds — the web and the app.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-media">
+								<img src="assets/custom/img/phonegap.svg" width="48" alt="" />
+							</div>
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">Hybrid App Ready</div>
+								</div>
+								<div class="item-text">Turn your mobile web app into native mobile app for Android or iOS using Apache Cordova or Adobe PhoneGap.</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+</template>
+
+<style scoped>
+	.slider-hero .swiper-container {
+		height: 352px;
+		height: 50vh;
+	}
+
+	.slider-hero .swiper-slide {
+		box-sizing: border-box;
+		padding: 16px;
+	}
+
+	.slider-hero .slide-content {
+		align-items: center;
+		border-radius: 16px;
+		box-sizing: border-box;
+		color: #FFFFFF;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		padding: 16px;
+		text-align: center;
+		width: 100%;
+	}
+
+	.slider-hero .slide-media {
+		height: 56px;
+	}
+
+	.slider-hero .slide-title {
+		font-size: 22px;
+		margin-top: 8px;
+	}
+
+	.slider-hero .slide-text {
+		font-size: 15px;
+		margin-top: 8px;
+	}
+
+	.slider-hero .slide-actions {
+		margin-top: 16px;
+	}
+
+	.swiper-container-3d .swiper-slide-shadow-left {
+		background-image: none;
+	}
+
+	.swiper-container-3d .swiper-slide-shadow-right {
+		background-image: none;
+	}
+</style>
+
+<script>
+	return {
+		data: function() {
+			return {
+				sliderHero: null
+			}
+		},
+		methods: {
+			showToolbar: function() {
+				var self = this;
+				setTimeout(function() {
+					self.$('.toolbar').removeClass('toolbar-hidden');
+				});
+			},
+			initializeSliderHero: function() {
+				var self = this;
+				self.sliderHero = app.swiper.create('.slider-hero .swiper-container', {
+					autoplay: {
+						delay: 3000,
+						disableOnInteraction: false
+					},
+					centeredSlides: true,
+					effect: 'coverflow',
+					coverflowEffect: {
+						rotate: 50,
+						stretch: 0,
+						depth: 100,
+						modifier: 1,
+						slideShadows : true
+					},
+					grabCursor: true,
+					loop: true,
+					slidesPerView: 'auto'
+				});
+			},
+			openLanguageSelector: function() {
+				var self = this;
+				var languageSelector = app.actions.create({
+					grid: true,
+					buttons: [
+						{
+							label: true,
+							text: i18next.t('change-language')
+						},
+						{
+							icon: '<img src="assets/custom/img/flag-ukraine.svg" alt="" width="48" />',
+							text: i18next.t('ukrainian'),
+							onClick: function() {
+								app.utils.i18n.setLanguage({lang: 'ua', dir: 'ltr'});
+							}
+						},
+						{
+							icon: '<img src="assets/custom/img/flag-united-kingdom.svg" alt="" width="48" />',
+							text: i18next.t('english') ,
+							onClick: function() {
+								app.utils.i18n.setLanguage({lang: 'en', dir: 'ltr'});
+							}
+						},
+
+						{
+							icon: '<img src="assets/custom/img/flag-ukraine.svg" alt="" width="48" />',
+							text: i18next.t('russian'),
+							onClick: function() {
+								app.utils.i18n.setLanguage({lang: 'ru', dir: 'ltl'});
+							}
+						}
+					]
+				});
+				languageSelector.open();
+			},
+			openThemeSelector: function() {
+				var self = this;
+				var themeSelector = app.actions.create({
+					grid: true,
+					buttons: [
+						{
+							label: true,
+							text: i18next.t('change-theme')
+						},
+						{
+							icon: '<i class="fas fa-3x fa-circle text-color-red"></i>',
+							text: i18next.t('red'),
+							onClick: function() {
+								app.utils.theme.setColor('red');
+							}
+						},
+						{
+							icon: '<i class="fas fa-3x fa-circle text-color-green"></i>',
+							text: i18next.t('green'),
+							onClick: function() {
+								app.utils.theme.setColor('green');
+							}
+						},
+						{
+							icon: '<i class="fas fa-3x fa-circle text-color-blue"></i>',
+							text: i18next.t('blue'),
+							onClick: function() {
+								app.utils.theme.setColor('blue');
+							}
+						},
+						{
+							icon: '<i class="fas fa-3x fa-circle text-color-pink"></i>',
+							text: i18next.t('pink'),
+							onClick: function() {
+								app.utils.theme.setColor('pink');
+							}
+						},
+						{
+							icon: '<i class="fas fa-3x fa-circle text-color-yellow"></i>',
+							text: i18next.t('yellow'),
+							onClick: function() {
+								app.utils.theme.setColor('yellow');
+							}
+						},
+						{
+							icon: '<i class="fas fa-3x fa-circle text-color-orange"></i>',
+							text: i18next.t('orange'),
+							onClick: function() {
+								app.utils.theme.setColor('orange');
+							}
+						},
+						{
+							icon: '<i class="fas fa-3x fa-circle text-color-gray"></i>',
+							text: i18next.t('gray'),
+							onClick: function() {
+								app.utils.theme.setColor('gray');
+							}
+						},
+						{
+							icon: '<i class="fas fa-3x fa-circle text-color-black"></i>',
+							text: i18next.t('black'),
+							onClick: function() {
+								app.utils.theme.setColor('black');
+							}
+						}
+					]
+				});
+				themeSelector.open();
+			}
+		},
+		on: {
+			pageInit: function() {
+				var self = this;
+				self.showToolbar();
+				self.initializeSliderHero();
+			}
+		}
+	}
+</script>
