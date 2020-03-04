@@ -70,7 +70,7 @@ window.config.admob = {
 */
 
 window.config.googleMaps = {
-	apiKey: 'AIzaSyCtiPGi_U05PWnEaFdu6SY62pxz57kBNvw'
+	apiKey: 'AIzaSyBsR2bgw6-OuxfS6CzTyqBraaDrKwwOp28'
 };
 
 /*
