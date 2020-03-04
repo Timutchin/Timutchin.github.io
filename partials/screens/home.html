@@ -3,12 +3,12 @@
 
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="title">
-                    <img class="ios-only theme-light-only" src="assets/custom/img/logo-text-black.svg" height="24"
+                <div class="title left">
+                    <img class="ios-only theme-light-only" src="assets/custom/img/logo-text-black.svg" height="42"
                          alt=""/>
-                    <img class="ios-only theme-dark-only" src="assets/custom/img/logo-text-white.svg" height="24"
+                    <img class="ios-only theme-dark-only" src="assets/custom/img/logo-text-white.svg" height="42"
                          alt=""/>
-                    <img class="md-only" src="assets/custom/img/logo-text-white.svg" height="35" alt=""/>
+                    <img class="md-only" src="assets/custom/img/logo-text-white.svg" height="42" alt=""/>
                 </div>
                 <div class="right">
                     <a href="#" class="link icon-only" @click="openLanguageSelector">
@@ -97,7 +97,38 @@
                 </ul>
             </div>
 
+            <div class="decorative-block"></div>
+
+            <div class="row margin-top justify-content-center">
+                <p>
+                    <span class="text-uppercase text-bold">ЗАЛИШИЛИСЯ ПИТАННЯ?</span>
+                </p>
+            </div>
+
+            <div class="row margin-top">
+                <div class="col"></div>
+                <div class="col">
+                    <a href="tel:0800300902" target="_blank" class="external">
+                    <button class="button button-big button-fill bg-color-red-9 text-bold">0 800 300 902</button>
+                    </a>
+                </div>
+                <div class="col"></div>
+            </div>
+
+            <div class="block-title">Default Block</div>
+            <div class="block inset">
+                <p>Кредит під заставу автомобіля – це доступний засіб отримання грошей на будь-які потреби.
+                    Основні його переваги очевидні: швидка видача необхідної суми,
+                    відсутність поручителів і нескінченних формальностей.
+                    Від вас буде потрібно саме авто і мінімальний пакет документів, а саме:
+                    ІПН, технічний паспорт і паспорт громадянина України.
+                    Головна перевага нашого кредитування під заставу авто
+                    – Ви маєте можливість продовжувати користуватися ним.</p>
+            </div>
+
         </div>
+
+
 
     </div>
 </template>
@@ -153,6 +184,14 @@
 
     .calculator-container-3d .swiper-slide-shadow-right {
         background-image: none;
+    }
+
+    .decorative-block{
+        height: 30vh;
+        background-image: url("assets/custom/img/speedometr-min.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 </style>
 
