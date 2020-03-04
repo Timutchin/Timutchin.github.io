@@ -237,11 +237,15 @@ function initializeA2HS() {
 		app.a2hs = event;
 		var dialog = app.dialog.create({
 			title: '',
-			content: '<div class="block no-margin no-padding text-align-center" style="font-size: 14px;"><img src="'+ window.config.app.logo +'" width="84" alt="" /><p><b>Add Nectar to your Home Screen?</b></p><p>Install Nectar on your home screen for quick and easy access when you\'re on the go.</p></div>',
+			content: '<div class="block no-margin no-padding text-align-center" style="font-size: 14px;">' +
+				'<img src="'+ window.config.app.logo +'" width="84" alt="" />' +
+				'<p><b>Додати Авто Ломбард на Головний Екран?</b></p>' +
+				'<p>Встановіть Авто Ломбард на свій головний екран для швидкого та легкого доступу, коли ви хочете.</p>' +
+				'</div>',
 			verticalButtons: true,
 			buttons: [
 				{
-					text: 'Add to Home Screen',
+					text: 'Додати на Головний Екран',
 					bold: true,
 					color: 'green',
 					onClick: function() {
@@ -250,14 +254,14 @@ function initializeA2HS() {
 							.then(function(choice) {
 							if (choice.outcome == 'accepted') {
 								app.toast.show({
-									text: 'Yaay! Added to Home Screen',
+									text: 'Йо! Най буде',
 									position:'bottom',
 									cssClass: 'toast-round bg-color-green'
 								});
 							}
 							else {
 								app.toast.show({
-									text: 'Oops! Could not add to Home Screen',
+									text: 'Ой! Не вдалося додати до головного екрана',
 									position:'bottom',
 									cssClass: 'toast-round bg-color-red'
 								});
@@ -268,14 +272,14 @@ function initializeA2HS() {
 					}
 				},
 				{
-					text: 'No, Thanks',
+					text: 'Ні, дякую',
 					color: 'gray'
 				}
 			]
 		});
 		setTimeout(function() {
 			dialog.open();
-		}, 60000);
+		}, 42000);
 	});
 }
 

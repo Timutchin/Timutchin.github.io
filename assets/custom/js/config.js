@@ -11,7 +11,7 @@ window.config = {};
 window.config.app = {
 	id: 'ua.com.lombard1.avto',
 	version: '0.0.2',
-	title: 'Автоломбард',
+	title: 'Авто Ломбард',
 	tagline: 'Кредит під заставу авто',
 	logo: 'assets/custom/img/logo-text-black.svg'
 };
