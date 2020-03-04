@@ -1,7 +1,7 @@
 {
-	"name": "Автоломбард",
-	"short_name": "Автоломбард",
-	"description": "Автоломбард",
+	"name": "Авто Ломбард",
+	"short_name": "Авто Ломбард",
+	"description": "Авто Ломбард",
 	"start_url": ".",
 	"display": "standalone",
 	"orientation": "portrait",
