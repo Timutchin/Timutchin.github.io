@@ -1,0 +1,286 @@
+<template>
+    <div class="page no-swipeback">
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="title">
+                    <img class="ios-only theme-light-only" src="assets/custom/img/logo-text-black.svg" height="24"
+                         alt=""/>
+                    <img class="ios-only theme-dark-only" src="assets/custom/img/logo-text-white.svg" height="24"
+                         alt=""/>
+                    <img class="md-only" src="assets/custom/img/logo-text-white.svg" height="35" alt=""/>
+                </div>
+                <div class="right">
+                    <a href="#" class="link icon-only" @click="openLanguageSelector">
+                        <i class="icon material-icons">language</i>
+                    </a>
+                    <a href="#" class="link icon-only" @click="openThemeSelector">
+                        <i class="icon material-icons">palette</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <div class="credit-calculator">
+                <div class="calculator-container">
+                    <div class="calculator-content">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-header justify-content-center margin-top">
+                <i class="fa-stack">
+                    <span class="fas fa-square fa-stack-2x text-color-blue ios-only"></span>
+                    <span class="fas fa-circle fa-stack-2x text-color-blue md-only"></span>
+                    <span class="fas fa-info fa-stack-1x fa-inverse"></span>
+                </i>
+                <span>&ensp;</span>
+                <span class="text-uppercase text-bold color-red-9">ПЕРЕВАГИ</span>
+            </div>
+
+            <div class="list media-list no-hairlines no-hairlines-between margin-vertical">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media">
+                                <img src="assets/custom/img/al-home-1.svg" width="68" alt=""/>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Автомобіль залишається у вас</div>
+                                </div>
+                                <div class="item-text">Продовжуйте користування власним авто!</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media">
+                                <img src="assets/custom/img/al-home-2.svg" width="68" alt=""/>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Швидке оформлення</div>
+                                </div>
+                                <div class="item-text">Отримуйте гроші в день звернення.</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media">
+                                <img src="assets/custom/img/al-home-3.svg" width="68" alt=""/>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">До 50 000 грн.</div>
+                                </div>
+                                <div class="item-text">Максимальний розмір кредиту 50 000 грн.</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media">
+                                <img src="assets/custom/img/al-home-4.svg" width="68" alt=""/>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Низька ставка</div>
+                                </div>
+                                <div class="item-text">Один з найнижчих відсотків по кредиту.</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</template>
+
+<style scoped>
+    .page-content{
+        height: 95%;
+    }
+    .credit-calculator .calculator-container {
+        height: 75vh;
+        background-image: url("assets/custom/img/temp-calc-bg-mob-min.png");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .credit-calculator .swiper-slide {
+        box-sizing: border-box;
+        padding: 16px;
+    }
+
+    .credit-calculator .calculator-content {
+        align-items: center;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        padding: 16px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .credit-calculator .slide-media {
+        height: 56px;
+    }
+
+    .credit-calculator .slide-title {
+        font-size: 22px;
+        margin-top: 8px;
+    }
+
+    .credit-calculator .slide-text {
+        font-size: 15px;
+        margin-top: 8px;
+    }
+
+    .credit-calculator .slide-actions {
+        margin-top: 16px;
+    }
+
+    .calculator-container-3d .swiper-slide-shadow-left {
+        background-image: none;
+    }
+
+    .calculator-container-3d .swiper-slide-shadow-right {
+        background-image: none;
+    }
+</style>
+
+<script>
+    return {
+        data: function () {
+        },
+        methods: {
+            showToolbar: function () {
+                var self = this;
+                setTimeout(function () {
+                    self.$('.toolbar').removeClass('toolbar-hidden');
+                });
+            },
+            openLanguageSelector: function () {
+                var self = this;
+                var languageSelector = app.actions.create({
+                    grid: true,
+                    buttons: [
+                        {
+                            label: true,
+                            text: i18next.t('change-language')
+                        },
+                        {
+                            icon: '<img src="assets/custom/img/flag-ukraine.svg" alt="" width="48" />',
+                            text: i18next.t('ukrainian'),
+                            onClick: function () {
+                                app.utils.i18n.setLanguage({lang: 'ua', dir: 'ltr'});
+                            }
+                        },
+                        {
+                            icon: '<img src="assets/custom/img/flag-united-kingdom.svg" alt="" width="48" />',
+                            text: i18next.t('english'),
+                            onClick: function () {
+                                app.utils.i18n.setLanguage({lang: 'en', dir: 'ltr'});
+                            }
+                        },
+
+                        {
+                            icon: '<img src="assets/custom/img/flag-ukraine.svg" alt="" width="48" />',
+                            text: i18next.t('russian'),
+                            onClick: function () {
+                                app.utils.i18n.setLanguage({lang: 'ru', dir: 'ltl'});
+                            }
+                        }
+                    ]
+                });
+                languageSelector.open();
+            },
+            openThemeSelector: function () {
+                var self = this;
+                var themeSelector = app.actions.create({
+                    grid: true,
+                    buttons: [
+                        {
+                            label: true,
+                            text: i18next.t('change-theme')
+                        },
+                        {
+                            icon: '<i class="fas fa-3x fa-circle text-color-red"></i>',
+                            text: i18next.t('red'),
+                            onClick: function () {
+                                app.utils.theme.setColor('red');
+                            }
+                        },
+                        {
+                            icon: '<i class="fas fa-3x fa-circle text-color-green"></i>',
+                            text: i18next.t('green'),
+                            onClick: function () {
+                                app.utils.theme.setColor('green');
+                            }
+                        },
+                        {
+                            icon: '<i class="fas fa-3x fa-circle text-color-blue"></i>',
+                            text: i18next.t('blue'),
+                            onClick: function () {
+                                app.utils.theme.setColor('blue');
+                            }
+                        },
+                        {
+                            icon: '<i class="fas fa-3x fa-circle text-color-pink"></i>',
+                            text: i18next.t('pink'),
+                            onClick: function () {
+                                app.utils.theme.setColor('pink');
+                            }
+                        },
+                        {
+                            icon: '<i class="fas fa-3x fa-circle text-color-yellow"></i>',
+                            text: i18next.t('yellow'),
+                            onClick: function () {
+                                app.utils.theme.setColor('yellow');
+                            }
+                        },
+                        {
+                            icon: '<i class="fas fa-3x fa-circle text-color-orange"></i>',
+                            text: i18next.t('orange'),
+                            onClick: function () {
+                                app.utils.theme.setColor('orange');
+                            }
+                        },
+                        {
+                            icon: '<i class="fas fa-3x fa-circle text-color-gray"></i>',
+                            text: i18next.t('gray'),
+                            onClick: function () {
+                                app.utils.theme.setColor('gray');
+                            }
+                        },
+                        {
+                            icon: '<i class="fas fa-3x fa-circle text-color-black"></i>',
+                            text: i18next.t('black'),
+                            onClick: function () {
+                                app.utils.theme.setColor('black');
+                            }
+                        }
+                    ]
+                });
+                themeSelector.open();
+            }
+        },
+        on: {
+            pageInit: function () {
+                var self = this;
+                self.showToolbar();
+                self.initializeSliderHero();
+            }
+        }
+    }
+</script>
