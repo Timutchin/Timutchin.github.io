@@ -1,7 +1,7 @@
 {
 	"name": "Авто Ломбард",
 	"short_name": "Авто Ломбард",
-	"description": "Авто Ломбард",
+	"description": "Кредит під заставу автомобіля",
 	"start_url": ".",
 	"display": "standalone",
 	"orientation": "portrait",

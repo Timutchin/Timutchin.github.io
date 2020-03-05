@@ -274,7 +274,7 @@ window.config.colors = {
 */
 
 window.config.theme = {
-	color: 'blue',
+	color: 'black',
 	layout: 'light',
   navigation: 'tabbar'
 };
