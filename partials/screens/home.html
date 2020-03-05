@@ -163,10 +163,192 @@
                     </div>
                 </div>
             </div>
+
+            <div class="block margin-top inset">
+                <a href="#" @click="openPopup">
+                    <button class="button button-big button-fill bg-color-red-9 text-bold">ОТРИМАТИ КОШТИ</button>
+                </a>
+            </div>
+
+            <div class="block inset">
+                <p>УМОВИ КРЕДИТУ У ДАНОМУ ПАКЕТІ ТАКІ, ЩО ПІСЛЯ ВИДАЧІ ГОТІВКИ АВТОМОБІЛЬ ЗАЛИШАЄТЬСЯ У ВАШОМУ
+                    ПОВНОМУ РОЗПОРЯДЖЕННІ. ІНАКШЕ КАЖУЧИ, ВИ ОТРИМУЄТЕ ПОТРІБНУ СУМУ, ЗАЛИШАЮЧИ АВТО ПРИ СОБІ!</p>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Приклад розрахунку кредиту під заставу автомобіля</div>
+                <div class="card-content card-content-padding">
+                    <p><i>Договір укладається від 2 місяців до 1 року з правом продовження і дострокового погашення без штрафних санкцій<br>
+                        Мінімальна сума позики 10 000 грн.</i><br><br>
+                        <b>Приклад розрахунку:</b><br>
+                        Сума: 10 000 грн.<br>
+                        Термін кредиту 2 місяці<br>
+                        Річна процентна ставка: від 36%<br>
+                        </p>
+                </div>
+                <div class="card-footer">Загальна переплата за 2 місяці без урахування тіла кредиту: 600 грн.<br>
+                    Загальна сума платежів за 2 місяці з урахуванням відсотків і тіла 10 600 грн.</div>
+            </div>
+
+            <div class="block margin-top inset ">
+            <div class="item-inner">
+                <div class="card-header justify-content-center margin-top">
+                    <a href="#" target="_blank" class="external">
+                        <i class="fa-stack">
+                            <span class="fas fa-square fa-stack-2x brand-color-facebook ios-only"></span>
+                            <span class="fas fa-circle fa-stack-2x brand-color-facebook md-only"></span>
+                            <span class="fab fa-facebook-f fa-stack-1x fa-inverse"></span>
+                        </i>
+                    </a>
+                    <a href="#" target="_blank" class="external">
+                        <i class="fa-stack">
+                            <span class="fas fa-square fa-stack-2x brand-color-twitter ios-only"></span>
+                            <span class="fas fa-circle fa-stack-2x brand-color-twitter md-only"></span>
+                            <span class="fab fa-twitter fa-stack-1x fa-inverse"></span>
+                        </i>
+                    </a>
+                    <a href="#" target="_blank" class="external">
+                        <i class="fa-stack">
+                            <span class="fas fa-square fa-stack-2x brand-color-linkedin ios-only"></span>
+                            <span class="fas fa-circle fa-stack-2x brand-color-linkedin md-only"></span>
+                            <span class="fab fa-linkedin-in fa-stack-1x fa-inverse"></span>
+                        </i>
+                    </a>
+                    <a href="#" target="_blank" class="external">
+                        <i class="fa-stack">
+                            <span class="fas fa-square fa-stack-2x brand-color-youtube ios-only"></span>
+                            <span class="fas fa-circle fa-stack-2x brand-color-youtube md-only"></span>
+                            <span class="fab fa-youtube fa-stack-1x fa-inverse"></span>
+                        </i>
+                    </a>
+                </div>
+            </div>
+            </div>
         </div>
 <!--        end page content-->
 <!--        start popup content-->
-       
+        <div class="fab fab-right-bottom md-only">
+            <a href="#" @click="openPopup" class="bg-color-red-9">
+                <i class="icon material-icons ">monetization_on</i>
+            </a>
+        </div>
+
+        <div class="popup popup-tablet-fullscreen popup-contact">
+            <div class="view">
+                <div class="page">
+
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left ios-only">
+                                <a href="#" class="link popup-close" data-popup=".popup-contact">
+                                    <span data-i18n="cancel">Cancel</span>
+                                </a>
+                            </div>
+                            <div class="title" data-i18n="get credit">Отримати Готівку</div>
+                            <div class="right ios-only">
+                                <button type="submit" class="button link" form="contact" data-i18n="send">Send</button>
+                            </div>
+                            <div class="right md-only">
+                                <a href="#" class="link icon-only popup-close" data-popup=".popup-contact">
+                                    <i class="icon material-icons">close</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-content">
+
+                        <form id="contact" name="contact" action="#" method="POST" enctype="multipart/form-data">
+                            <div class="list no-hairlines no-hairlines-between">
+                                <ul>
+                                    <li>
+                                        <div class="item-content item-input item-input-with-info">
+                                            <div class="item-media">
+                                                <i class="icon f7-icons ios-only">person</i>
+                                                <i class="icon material-icons md-only">person</i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title item-floating-label" data-i18n="name">Ім'я</div>
+                                                <div class="item-input-wrap">
+                                                    <input type="text" name="name" required/>
+                                                    <div class="item-input-info input-error-message"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content item-input item-input-with-info">
+                                            <div class="item-media">
+                                                <i class="icon f7-icons ios-only">email</i>
+                                                <i class="icon material-icons md-only">email</i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title item-floating-label">Email</div>
+                                                <div class="item-input-wrap">
+                                                    <input type="email" name="email" required/>
+                                                    <div class="item-input-info input-error-message"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content item-input item-input-with-info">
+                                            <div class="item-media">
+                                                <i class="icon f7-icons ios-only">phone</i>
+                                                <i class="icon material-icons md-only">phone</i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title item-floating-label">Ваш номер телефона</div>
+                                                <div class="item-input-wrap">
+                                                    <input type="numpad" required />
+                                                    <div class="item-input-info input-error-message"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content item-input item-input-with-info">
+                                            <div class="item-media">
+                                                <i class="icon f7-icons ios-only">money_dollar</i>
+                                                <i class="icon material-icons md-only">monetization_on</i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title item-floating-label">Сума</div>
+                                                <div class="item-input-wrap">
+                                                    <input type="numpad" required />
+                                                    <div class="item-input-info input-error-message"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content item-input item-input-with-info">
+                                            <div class="item-media">
+                                                <i class="icon f7-icons ios-only">timer</i>
+                                                <i class="icon material-icons md-only">timer</i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title item-floating-label">Термін у днях</div>
+                                                <div class="item-input-wrap">
+                                                    <input type="numpad" required />
+                                                    <div class="item-input-info input-error-message"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="block md-only">
+                                <button type="submit" class="button button-big button-fill" data-i18n="order">Замовити
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
 <!--        end popup content-->
     </div>
 </template>
@@ -236,6 +418,10 @@
 <script>
     return {
         data: function () {
+            return {
+                formValidator: null,
+                contact: null
+            }
         },
         methods: {
             showToolbar: function () {
@@ -347,11 +533,89 @@
                     ]
                 });
                 themeSelector.open();
+            },
+            loadData: function () {
+                var self = this;
+                app.request.json(
+                    'assets/custom/dataset/contact.json',
+                    function (data) {
+                        if (data) {
+                            self.$setState({
+                                contact: data
+                            });
+                        }
+                    }
+                );
+            },
+            openPopup: function () {
+                var self = this;
+                var popup = app.popup.create({
+                    el: '.popup-contact',
+                    on: {
+                        opened: function () {
+                            self.initializeFormValidator();
+                        },
+                        closed: function () {
+                            self.formValidator.destroy();
+                            document.querySelector('form[name=contact]').reset();
+                        }
+                    }
+                });
+                popup.open();
+            },
+            initializeFormValidator: function () {
+                var self = this;
+                self.formValidator = jQuery('form[name=contact]').validate({
+                    ignore: [],
+                    rules: {
+                        name: {
+                            required: true
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        subject: {
+                            required: true
+                        },
+                        message: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        name: {
+                            required: 'Please enter name.'
+                        },
+                        email: {
+                            required: 'Please enter email address.',
+                            email: 'Please enter a valid email address.'
+                        },
+                        subject: {
+                            required: 'Please enter subject.'
+                        },
+                        message: {
+                            required: 'Please enter message.'
+                        }
+                    },
+                    submitHandler: function (form) {
+                        self.submitForm(form);
+                    }
+                });
+            },
+            submitForm: function (form) {
+                var self = this;
+                app.toast.show({
+                    text: 'Thank you for writing us. We will get back to you soon.',
+                    position: 'bottom',
+                    cssClass: 'toast-round bg-color-green'
+                });
+                app.popup.close('.popup-contact', false);
             }
         },
         on: {
             pageInit: function () {
                 var self = this;
+                self.loadData();
                 self.showToolbar();
             }
         }
