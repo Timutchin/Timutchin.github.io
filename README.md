@@ -1,2 +1,2 @@
-# avtolombard-mob-app
-мобильное приложение для avtolombard
+# test-mob-app
+мобильное приложение test
